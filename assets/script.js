@@ -56,3 +56,22 @@ function updateCarousel(index, direction) {
 
     console.log(`Clic sur la flèche ${direction}`);
 }
+
+// Gestionnaire d'événement pour le clic sur la flèche gauche
+arrowLeft.addEventListener('click', function () {
+    currentIndex = (currentIndex - 1);
+    updateCarousel(currentIndex, 'left');
+    updateDots(currentIndex); // Mettez à jour les points indicateurs
+});
+
+// Gestionnaire d'événement pour le clic sur la flèche droite
+arrowRight.addEventListener('click', function () {
+    currentIndex = (currentIndex + 1) ;
+    updateCarousel(currentIndex, 'right');
+    updateDots(currentIndex); // Mettez à jour les points indicateurs
+});
+
+
+// Afficher la première diapositive au chargement de la page
+updateCarousel(currentIndex, 'démarrage');
+updateDots(currentIndex); // Mettez à jour les points indicateurs pour la première diapositive
