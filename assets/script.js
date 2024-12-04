@@ -25,3 +25,14 @@ const dots = document.querySelectorAll('.dot'); // Sélectionnez tous les points
 
 let currentIndex = 0;
 
+// Fonction pour mettre à jour les points indicateurs
+function updateDots(index) {
+    dots.forEach((dot, i) => {
+        if (i === index) {
+            dot.classList.add('dot_selected'); // Ajoutez la classe pour le point actuel
+        } else {
+            dot.classList.remove('dot_selected'); // Supprimez la classe pour les autres points
+        }
+    });
+}
+
