@@ -73,5 +73,5 @@ arrowRight.addEventListener('click', function () {
 
 
 // Afficher la première diapositive au chargement de la page
-updateCarousel(currentIndex, 'démarrage');
+updateCarousel(currentIndex, 'start');
 updateDots(currentIndex); // Mettez à jour les points indicateurs pour la première diapositive
